@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gluten Free - Pizzería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./index.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-red-700 text-white shadow">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold">🍕 Gluten Free</h1>
+
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Navegación -->
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="#irMenu" class="hover:underline">Menú</a>
+                <a href="#nosotros" class="hover:underline">Nosotros</a>
+                <a href="#contacto" class="hover:underline">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Navegación móvil -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-red-800">
+            <a href="#menu" class="block hover:underline">Menú</a>
+            <a href="#nosotros" class="block hover:underline">Nosotros</a>
+            <a href="#contacto" class="block hover:underline">Contacto</a>
+        </div>
+    </header>
+
+
+    <!-- Hero Slider -->
+    <section id="hero"
+        class="relative h-[90vh] flex items-center justify-center text-center bg-cover bg-center transition-all duration-700">
+        <div class="bg-black/50 p-8 rounded-xl">
+            <h2 id="hero-title" class="text-4xl md:text-5xl font-bold text-white"></h2>
+            <p id="hero-text" class="text-lg text-gray-200 mt-4"></p>
+            <button id="openModal"
+                class="px-8 py-3 mt-6 bg-red-700 text-white rounded-lg shadow hover:bg-red-800 transition">
+                🔥 Ofertas 🔥
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="ofertasModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-2xl shadow-lg w-11/12 md:w-2/3 lg:w-1/2 relative overflow-hidden">
+
+            <!-- Botón cerrar -->
+            <button id="closeModal"
+                class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold z-20">&times;</button>
+
+            <!-- Slider -->
+            <div class="relative w-full overflow-hidden">
+                <div id="slider" class="flex transition-transform duration-500">
+
+                    <!-- Oferta 1 -->
+                    <div class="min-w-full flex flex-col items-center justify-center p-6">
+                        <img src="https://genovesapizza.cl/wp-content/uploads/2018/10/2gran_bebida-480x480.jpg"
+                            alt="Oferta 1" class="rounded-xl shadow-lg w-72 h-72 object-cover">
+                        <h2 class="text-xl font-semibold mt-4">2 Pizzas + 1 coca-cola</h2>
+                        <p class="text-gray-600 line-through">Antes: $19.000</p>
+                        <p class="text-red-600 font-bold text-lg">Hoy: $15.000</p>
+                    </div>
+
+                    <!-- Oferta 2 -->
+                    <div class="min-w-full flex flex-col items-center justify-center p-6">
+                        <img src="https://images.happycow.net/venues/1024/20/10/hcmp201069_884323.jpeg" alt="Oferta 2"
+                            class="rounded-xl shadow-lg w-72 h-72 object-cover">
+                        <h2 class="text-xl font-semibold mt-4">4 Empanadas + 1 Cerveza</h2>
+                        <p class="text-gray-600 line-through">Antes: $8.000</p>
+                        <p class="text-red-600 font-bold text-lg">Hoy: $6.500</p>
+                    </div>
+
+                    <!-- Oferta 3 -->
+                    <div class="min-w-full flex flex-col items-center justify-center p-6">
+                        <img src="https://nanucpatagonia.com/images/nanuc-box-.png" alt="Oferta 3"
+                            class="rounded-xl shadow-lg w-72 h-72 object-cover">
+                        <h2 class="text-xl font-semibold mt-4">Media docena Medialunas</h2>
+                        <p class="text-gray-600 line-through">Antes: $6000</p>
+                        <p class="text-red-600 font-bold text-lg">Hoy: $4.000</p>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <div class="absolute inset-0 flex items-center justify-between px-4">
+                    <button id="prev"
+                        class="bg-gray-800 bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-80">❮</button>
+                    <button id="next"
+                        class="bg-gray-800 bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-80">❯</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="bg-red-100 py-16 px-6 w-[90vw] m-auto mt-10 rounded-xl">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-red-700 mb-6">Sobre Nosotros</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                En <span class="font-semibold">Gluten Free</span> creemos que todos merecen disfrutar de una pizza
+                deliciosa sin preocuparse por el gluten.
+                Usamos ingredientes frescos, masa casera y recetas pensadas para tu salud y sabor auténtico.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="pt-16 px-6 max-w-6xl mx-auto">
+        <h3 id="irMenu" class="text-3xl font-bold text-center mb-10 text-red-700">Nuestro Menú</h3>
+        <!-- Filtros -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button class="filtro bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-lg"
+                data-filtro="Todos">Todos</button>
+            <button class="filtro bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
+                data-filtro="Pizzas">Pizzas</button>
+            <button class="filtro bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
+                data-filtro="Empanadas">Empanadas</button>
+            <button class="filtro bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
+                data-filtro="Churros">Churros</button>
+            <button class="filtro bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
+                data-filtro="Donas">Donas</button>
+            <button class="filtro bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
+                data-filtro="Postres dulces">Medialunas</button>
+        </div>
+        <!-- Contenedor dinámico -->
+        <!-- Grupo Salados -->
+        <div class="mb-16">
+            <span id="salado"></span>
+            <div id="menu-salado" class="grid md:grid-cols-1 gap-8"></div>
+        </div>
+
+        <!-- Grupo Dulces -->
+        <div>
+            <span id="dulce"></span>
+            <div id="menu-dulce" class="grid md:grid-cols-1 gap-8"></div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN DE OFERTAS -->
+    <section id="ofertas-section" class="max-w-6xl mb-16 m-auto px-6 py-10">
+        <h3 id="titulo-ofertas" class="text-3xl font-bold text-center mb-10 text-red-600">
+            Ofertas del Día
+        </h3>
+
+        <div id="contenedor-ofertas" class="grid md:gap-8 px-6">
+            <!-- Aquí se renderizan ofertas dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Footer con contacto -->
+    <footer id="contacto" class="bg-red-800 text-white text-center py-10 mt-10">
+        <h3 class="text-2xl font-bold mb-4">Contacto</h3>
+        <p class="mb-2">📍 Av. Siempre Viva 123, Ciudad</p>
+        <p class="mb-2">📞 +54 9 11 1234-5678</p>
+        <p class="mb-6">✉️ contacto@glutenfree.com</p>
+
+        <!-- Redes sociales -->
+        <h3 class="text-2xl font-semibold py-4">Siguenos</h3>
+        <div class="flex justify-center gap-6 mb-6 text-3xl">
+            <a href="https://www.facebook.com/" target="_blank" class="hover:text-gray-300">
+                <i class='bg-black/20 border-2 p-2 rounded-full bx bxl-facebook hover:bg-black/50'></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="hover:text-gray-300">
+                <i class='bg-black/20 border-2 p-2 rounded-full bx bxl-instagram hover:bg-black/50'></i>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" class="hover:text-gray-300">
+                <i class='bg-black/20 border-2 p-2 rounded-full bx bxl-tiktok hover:bg-black/50'></i>
+            </a>
+        </div>
+
+        <p class="text-sm">&copy; 2025 Gluten Free - Pizzería sin gluten. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank"
+        class="fixed right-5 bottom-5 text-4xl">
+        <i class="bg-green-600 rounded-full p-2 bx bxl-whatsapp text-white shadow-lg"></i>
+    </a>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        //Close
+        function closeModal() {
+            document.getElementById("modal-ofertas").classList.add("hidden");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+[
+        {
+            "id": "Salados",
+            "categoria": "Pizzas",
+            "nombre": "Pizza Margarita",
+            "descripcion": "Queso mozzarella fresco, albahaca y tomate.",
+            "precio": 1000,
+            "imagen": "https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-margherita-pizza-1611491820.jpg"
+        },
+        {
+            "id": "Salados",
+            "categoria": "Pizzas",
+            "nombre": "Pizza Fugazzeta",
+            "descripcion": "Cebolla, mucho queso y masa sin gluten.",
+            "precio": 1250,
+            "imagen": "https://allforpizza.com/wp-content/uploads/2023/02/Fugazzeta-14-1000x602.jpg"
+        },
+        {
+            "id": "Salados",
+            "categoria": "Pizzas",
+            "nombre": "Pizza Vegana",
+            "descripcion": "Vegetales frescos y queso vegano sin gluten.",
+            "precio": 1200,
+            "imagen": "https://www.comedera.com/wp-content/uploads/sites/9/2022/06/Pizza-vegana-shutterstock_1369907708.jpg"
+        },
+        {
+            "id": "Salados",
+            "categoria": "Empanadas",
+            "nombre": "Empanada de Carne",
+            "descripcion": "Relleno jugoso de carne, cebolla y especias.",
+            "precio": 800,
+            "imagen": "https://bigoven-res.cloudinary.com/image/upload/t_recipe-1280/empanadas-de-carne-3d4d3e.jpg"
+        },
+        {
+            "id": "Salados",
+            "categoria": "Empanadas",
+            "nombre": "Empanada de Pollo",
+            "descripcion": "Pollo desmenuzado con verduras frescas.",
+            "precio": 850,
+            "imagen": "https://quereceta.com/wp-content/uploads/receta-empanadas-de-pollo-1024x683.jpg"
+        },
+        {
+            "id": "Salados",
+            "categoria": "Empanadas",
+            "nombre": "Empanada Caprese",
+            "descripcion": "Queso mozzarella, tomate y albahaca.",
+            "precio": 900,
+            "imagen": "https://3.bp.blogspot.com/-jfVJRtC3kls/UfEv99k3ZXI/AAAAAAAABL4/PbzVtnR1GGk/s1600/emp+capresse3.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Churros",
+            "nombre": "Comunes",
+            "descripcion": "Clásicos churros sin gluten, crocantes y dulces.",
+            "precio": 700,
+            "imagen": "https://www.cookingclassy.com/wp-content/uploads/2018/08/churros-55.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Churros",
+            "nombre": "Rellenos",
+            "descripcion": "Clásicos churros sin gluten, crocantes y dulces.",
+            "precio": 800,
+            "imagen": "https://churros.cl/wp-content/uploads/2015/06/v01.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Churros",
+            "nombre": "bañados",
+            "descripcion": "Clásicos churros sin gluten, crocantes y dulces.",
+            "precio": 1000,
+            "imagen": "https://adex-b2peru.s3.amazonaws.com/userfiles/product/photos/763_5f6cb15c7b6af.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Donas",
+            "nombre": "Comunes",
+            "descripcion": "Donas esponjosas.",
+            "precio": 600,
+            "imagen": "https://www.lolitalapastelera.com/wp-content/uploads/Galeria-1-166.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Donas",
+            "nombre": "Glaseadas",
+            "descripcion": "Donas esponjosas bañadas en glaseado.",
+            "precio": 700,
+            "imagen": "https://walac.pe/wp-content/uploads/2020/04/Donas-1068x801.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Donas",
+            "nombre": "Rellenas",
+            "descripcion": "Donas esponjosas bañadas en glaseado y rellenas.",
+            "precio": 800,
+            "imagen": "https://img.freepik.com/fotos-premium/flota-donuts-rellenos-gelatina-rejilla-enfriar-panaderia_419341-126201.jpg"
+        },
+        {
+            "id": "Dulces",
+            "categoria": "Postres dulces",
+            "nombre": "Medialunas",
+            "descripcion": "Clásicas facturas argentinas sin gluten.",
+            "precio": 750,
+            "imagen": "https://media.airedesantafe.com.ar/p/a8c3ffb26a1c2c9a055af656006f0199/adjuntos/268/imagenes/003/717/0003717993/1200x0/smart/como-hacer-medialunas-caseras-paso-paso.png"
+        }
+    ]
