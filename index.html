@@ -165,11 +165,17 @@
         </div>
     </section>
 
-    <!-- Modal oculto -->
-    <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-        <div class="relative">
-            <img id="modal-img" src="" alt="Imagen ampliada" class="max-h-[80vh] rounded shadow-lg">
-            <button id="closeModal" class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-black">X</button>
+    <!-- MODAL -->
+    <div id="modal-ofertas" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-2xl shadow-lg max-w-md w-full p-6 relative">
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl">
+                &times;
+            </button>
+            <!-- CONTENIDO DEL MODAL -->
+            <h2 class="text-2xl font-bold text-center text-red-600 mb-4">🔥 Ofertas del Día 🔥</h2>
+            <ul id="lista-ofertas" class="space-y-3 text-gray-700">
+                <!-- Aquí se renderizan ofertas dinámicamente -->
+            </ul>
         </div>
     </div>
 
@@ -213,3 +219,4 @@
 
 
 </html>
+
