@@ -7,6 +7,8 @@
     <title>Gluten Free - Pizzería</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="./index.js"></script>
+    <script type="module" src="./carrito.js"></script>
+    <script type="module" src="./llamarApi.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         html {
@@ -15,39 +17,53 @@
     </style>
 </head>
 
-<body class="font-sans bg-gray-50 text-gray-800">
+<body id="inicio" class="font-sans bg-gray-50 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-red-700 text-white shadow">
+    <header class="fixed w-full z-50 bg-red-700 text-white shadow">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <h1 class="text-2xl font-bold">🍕 Gluten Free</h1>
 
-            <!-- Botón hamburguesa (solo visible en móviles) -->
-            <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
-                ☰
-            </button>
-
-            <!-- Navegación -->
-            <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="#irMenu" class="hover:underline">Menú</a>
-                <a href="#nosotros" class="hover:underline">Nosotros</a>
-                <a href="#contacto" class="hover:underline">Contacto</a>
-            </nav>
+            <div class="flex gap-4">
+                <button id="boton-carrito" class="text-3xl focus:outline-none">
+                    <span id="cart-count" class="text-sm font-bold">0</span>
+                    <i class='bx bxs-shopping-bags'></i>
+                </button>
+                <!-- Botón hamburguesa (solo visible en móviles) -->
+                <button id="menu-toggle" class="text-3xl focus:outline-none">
+                    <i class='p-1 border-2 border-gray-50 rounded-full bx bx-menu-alt-right'></i>
+                </button>
+            </div>
         </div>
 
         <!-- Navegación móvil -->
-        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-red-800">
-            <a href="#menu" class="block hover:underline">Menú</a>
-            <a href="#nosotros" class="block hover:underline">Nosotros</a>
-            <a href="#contacto" class="block hover:underline">Contacto</a>
+        <div id="mobile-menu" class="hidden px-6 py-6 space-y-2 bg-red-800">
+            <a href="#inicio" class="block pb-4 hover:underline">Inicio</a>
+            <a href="#menu" class="block pb-4 hover:underline">Menú</a>
+            <a href="#nosotros" class="block pb-4 hover:underline">Nosotros</a>
+            <a href="#contacto" class="block pb-4 hover:underline">Contacto</a>
         </div>
     </header>
 
+    <!-- Modal cart -->
+    <div id="carrito"  class="hidden fixed top-[75px] right-1 text-center bg-white/95 w-96 h-96 overflow-y-auto rounded-lg z-50">
+        <h3 class="text-2xl pt-4">Pedido</h3>
+        <div id="en-carrito" class="flex flex-col justify-around items-center gap-4 py-4 m-2">
+        </div>
+        <div id="total">
+        </div>
+        <div class="p-4">
+            <a id="btn-whatsapp" href="#" target="_blank"
+                class="hidden w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg block text-center mt-2">
+                Comprar por WhatsApp
+            </a>
+        </div>
+    </div>
 
     <!-- Hero Slider -->
     <section id="hero"
-        class="relative h-[90vh] flex items-center justify-center text-center bg-cover bg-center transition-all duration-700">
+        class="relative h-screen flex items-center justify-center text-center bg-cover bg-center transition-all duration-700">
         <div class="bg-black/50 p-8 rounded-xl">
             <h2 id="hero-title" class="text-4xl md:text-5xl font-bold text-white"></h2>
             <p id="hero-text" class="text-lg text-gray-200 mt-4"></p>
@@ -166,7 +182,7 @@
     </section>
 
     <!-- MODAL -->
-    <div id="modal-ofertas" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center px-8 z-50">
+    <div id="modal-ofertas" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
         <div class="bg-white rounded-2xl shadow-lg max-w-md w-full p-6 relative">
             <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl">
                 &times;
@@ -200,6 +216,15 @@
             </a>
         </div>
 
+        <!-- Mapa -->
+        <div class="w-full h-80 px-6 pb-8">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.838946929618!2d-58.38155948477036!3d-34.60368498045954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc1d563f7f%3A0x8f8f9d82b56b57a!2sObelisco!5e0!3m2!1ses-419!2sar!4v1671234567890!5m2!1ses-419!2sar"
+                width="90%" height="100%" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow-lg">
+            </iframe>
+        </div>
+
         <p class="text-sm">&copy; 2025 Gluten Free - Pizzería sin gluten. Todos los derechos reservados.</p>
     </footer>
 
@@ -219,5 +244,3 @@
 
 
 </html>
-
-
