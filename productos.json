@@ -1,5 +1,6 @@
 [
         {
+            "N": 1,
             "id": "Salados",
             "categoria": "Pizzas",
             "nombre": "Pizza Margarita",
@@ -8,6 +9,7 @@
             "imagen": "https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-margherita-pizza-1611491820.jpg"
         },
         {
+            "N": 2,
             "id": "Salados",
             "categoria": "Pizzas",
             "nombre": "Pizza Fugazzeta",
@@ -16,6 +18,7 @@
             "imagen": "https://allforpizza.com/wp-content/uploads/2023/02/Fugazzeta-14-1000x602.jpg"
         },
         {
+            "N": 3,
             "id": "Salados",
             "categoria": "Pizzas",
             "nombre": "Pizza Vegana",
@@ -24,6 +27,7 @@
             "imagen": "https://www.comedera.com/wp-content/uploads/sites/9/2022/06/Pizza-vegana-shutterstock_1369907708.jpg"
         },
         {
+            "N": 4,
             "id": "Salados",
             "categoria": "Empanadas",
             "nombre": "Empanada de Carne",
@@ -32,6 +36,7 @@
             "imagen": "https://bigoven-res.cloudinary.com/image/upload/t_recipe-1280/empanadas-de-carne-3d4d3e.jpg"
         },
         {
+            "N": 5,
             "id": "Salados",
             "categoria": "Empanadas",
             "nombre": "Empanada de Pollo",
@@ -40,6 +45,7 @@
             "imagen": "https://quereceta.com/wp-content/uploads/receta-empanadas-de-pollo-1024x683.jpg"
         },
         {
+            "N": 6,
             "id": "Salados",
             "categoria": "Empanadas",
             "nombre": "Empanada Caprese",
@@ -48,6 +54,7 @@
             "imagen": "https://3.bp.blogspot.com/-jfVJRtC3kls/UfEv99k3ZXI/AAAAAAAABL4/PbzVtnR1GGk/s1600/emp+capresse3.jpg"
         },
         {
+            "N": 7,
             "id": "Dulces",
             "categoria": "Churros",
             "nombre": "Comunes",
@@ -56,6 +63,7 @@
             "imagen": "https://www.cookingclassy.com/wp-content/uploads/2018/08/churros-55.jpg"
         },
         {
+            "N": 8,
             "id": "Dulces",
             "categoria": "Churros",
             "nombre": "Rellenos",
@@ -64,6 +72,7 @@
             "imagen": "https://churros.cl/wp-content/uploads/2015/06/v01.jpg"
         },
         {
+            "N": 9,
             "id": "Dulces",
             "categoria": "Churros",
             "nombre": "bañados",
@@ -72,6 +81,7 @@
             "imagen": "https://adex-b2peru.s3.amazonaws.com/userfiles/product/photos/763_5f6cb15c7b6af.jpg"
         },
         {
+            "N": 10,
             "id": "Dulces",
             "categoria": "Donas",
             "nombre": "Comunes",
@@ -80,6 +90,7 @@
             "imagen": "https://www.lolitalapastelera.com/wp-content/uploads/Galeria-1-166.jpg"
         },
         {
+            "N": 11,
             "id": "Dulces",
             "categoria": "Donas",
             "nombre": "Glaseadas",
@@ -88,6 +99,7 @@
             "imagen": "https://walac.pe/wp-content/uploads/2020/04/Donas-1068x801.jpg"
         },
         {
+            "N": 12,
             "id": "Dulces",
             "categoria": "Donas",
             "nombre": "Rellenas",
@@ -96,6 +108,7 @@
             "imagen": "https://img.freepik.com/fotos-premium/flota-donuts-rellenos-gelatina-rejilla-enfriar-panaderia_419341-126201.jpg"
         },
         {
+            "N": 13,
             "id": "Dulces",
             "categoria": "Postres dulces",
             "nombre": "Medialunas",
